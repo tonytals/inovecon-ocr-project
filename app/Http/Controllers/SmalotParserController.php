@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
 /**
@@ -16,6 +17,7 @@ class SmalotParserController extends Controller
     {
         // Parse PDF file and build necessary objects.
         $parser = new \Smalot\PdfParser\Parser();
+
         $pdf = $parser->parseFile('c:\projetos-git\inep.pdf');
         
         $text = $pdf->getText();
