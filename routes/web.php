@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PdfParaImagemController;
 use App\Http\Controllers\SmalotParserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,4 +20,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/teste', [SmalotParserController::class, 'smtparser']);
+Route::get('/pdfparatexto', [SmalotParserController::class, 'pdfParaTexto']);
+
+Route::get('/pdfparaimagem', [PdfParaImagemController::class, 'PdfParaImagem']);
