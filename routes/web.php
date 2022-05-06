@@ -22,4 +22,4 @@ Route::get('/', function () {
 
 Route::get('/pdfparatexto', [SmalotParserController::class, 'pdfParaTexto']);
 
-Route::get('/pdfparaimagem', [PdfParaImagemController::class, 'PdfParaImagem']);
+Route::get('/pdfparaimagem/{filename}', [PdfParaImagemController::class, 'PdfParaImagem']);
